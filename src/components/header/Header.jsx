@@ -3,7 +3,7 @@ import MyInput from '../input/MyInput'
 import MySelect from '../select/MySelect'
 import background from '../../img/books.jpeg'
 
-const Header = () => {
+const Header = (props) => {
       const categories = ["all", "art", "biography", "computers", "history", "medical", "poetry"];
       const sorting = ["relevance", "newest"]
       return (

@@ -1,12 +1,19 @@
+import { useEffect, useState } from "react";
 import Header from "./components/header/Header";
+import { BooksContext } from "./context";
 
 import './style/main.css';
 
 function App() {
+
+  const [books, setBooks] = useState([]);
+
   return (
-    <div>
-      <Header/>
-    </div>
+    <BooksContext.Provider value={{
+      books, setBooks
+    }}>
+      <Header />
+    </BooksContext.Provider>
   );
 }
 
