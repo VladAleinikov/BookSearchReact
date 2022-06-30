@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import search from '../../img/icons/search.svg'
+import search from '../../../img/icons/search.svg'
 import $ from 'jquery'
 import request from 'superagent'
-import { BooksContext } from '../../context'
+import { BooksContext } from '../../../context'
 const MyInput = (props) => {
   const {books, setBooks} = useContext(BooksContext)
   $('#searchBtn').on('click', (e) => {

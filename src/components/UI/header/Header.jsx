@@ -1,7 +1,7 @@
 import React from 'react'
 import MyInput from '../input/MyInput'
 import MySelect from '../select/MySelect'
-import background from '../../img/books.jpeg'
+import background from '../../../img/books.jpeg'
 
 const Header = (props) => {
       const categories = ["all", "art", "biography", "computers", "history", "medical", "poetry"];

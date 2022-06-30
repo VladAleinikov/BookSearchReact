@@ -1,6 +1,6 @@
 
 import React from 'react'
-import more from '../../img/icons/expand_more.svg'
+import more from '../../../img/icons/expand_more.svg'
 
 const MySelect = ({ options, ...props }) => {
   return (
