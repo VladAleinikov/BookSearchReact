@@ -1,1 +1,149 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  position: relative;
+  height: 40vh;
+  overflow: hidden;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .content {
+  width: 80%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .content .filters {
+  width: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #c1c1c1;
+}
+
+.header .content .filters .categories,
+.header .content .filters .sorting {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .background {
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header .background img {
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  width: 100%;
+}
+
+.header .background .layout {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.input {
+  position: relative;
+  width: 650px;
+  height: 40px;
+}
+
+.input input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  font-size: 23px;
+}
+
+.input .searchBtn {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.input .searchBtn img {
+  margin: 3px;
+  height: 34px;
+  width: 34px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.input .searchBtn:hover img {
+  margin: 0;
+  height: 40px;
+  width: 40px;
+}
+
+.select {
+  position: relative;
+}
+
+.select select {
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 14px;
+  border-radius: 0;
+  border: none;
+  padding: 5px;
+  width: 150px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #333;
+}
+
+.select select option {
+  border-radius: 0;
+}
+
+.select .expand_more {
+  position: absolute;
+  top: 0;
+  left: 130px;
+  width: 30px;
+  height: 30px;
+}
+/*# sourceMappingURL=main.css.map */

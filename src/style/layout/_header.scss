@@ -1,0 +1,52 @@
+.header {
+      position: relative;
+      height: 40vh;
+      overflow: hidden;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .content {
+            width: 80%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            .filters {
+                  width: 650px;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-around;
+                  color: rgb(193, 193, 193);
+                  .categories,
+                  .sorting{
+                        width: 40%;
+                        display: flex;
+
+                  }
+            }
+      }
+
+      .background {
+            z-index: -10;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            img {
+                  filter: blur(1px);
+                  width: 100%;
+            }
+            .layout {
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: rgba($color: #000000, $alpha: 0.7);
+            }
+      }
+}

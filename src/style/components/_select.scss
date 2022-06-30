@@ -1,0 +1,26 @@
+.select {
+      position: relative;
+      select {
+
+            cursor: pointer;
+            margin-left: 8px;
+            font-size: 14px;
+            border-radius: 0;
+            border: none;
+            padding: 5px;
+            width: 150px;
+            appearance: none;
+            color: #333;
+            option {
+                  border-radius: 0;
+            }
+      }
+      .expand_more {
+            position: absolute;
+            top: 0;
+            left: 130px;
+            width: 30px;
+            height: 30px;
+
+      }
+}
