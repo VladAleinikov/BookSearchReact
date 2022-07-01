@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./components/AppRouter";
 import Header from "./components/UI/header/Header";
 import { BooksContext } from "./context";
 
@@ -12,7 +14,11 @@ function App() {
     <BooksContext.Provider value={{
       books, setBooks
     }}>
-      <Header />
+      
+      <BrowserRouter>
+        <Header />
+        <AppRouter />
+      </BrowserRouter>
     </BooksContext.Provider>
   );
 }

@@ -1,14 +1,17 @@
 import React from 'react'
-import { Route, Redirect } from 'react-router-dom'
-import routes from '../router/router'
+import { Route, Navigate, Routes } from 'react-router-dom'
+import {routes} from '../router/routes'
 const AppRouter = () => {
+
       return (
-            <div>
+            <Routes>
+
                   {routes.map(route =>
-                        <Route component={route.component} path={route.path} exact={route.exact} key={route.path} />
+                        <Route element={route.component} path={route.path} exact={route.exact} key={route.path} />
                   )}
-                  <Redirect to={'/main'} />
-            </div>
+
+                  
+            </Routes>
       )
 }
 
