@@ -3,6 +3,8 @@
       padding: 0;
       margin: 0;
       font-family: "Poppins", sans-serif;
+      outline: none;
+      text-decoration: none;
 }
 @import "./layout/header";
 @import "./components/input";
@@ -10,3 +12,4 @@
 @import "./pages/searchPage";
 @import "./layout/card";
 @import "./components/button";
+@import './pages//ProductPage';

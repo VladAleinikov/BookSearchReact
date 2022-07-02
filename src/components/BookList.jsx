@@ -7,12 +7,12 @@ const BookList = () => {
       return (
             <div className='booksList'>
                   {
-
                         books.map((book, index) => <BookCard
-                                          img={book.volumeInfo.imageLinks.thumbnail}
-                                          authors={book.volumeInfo.authors}
-                                          name={book.volumeInfo.title}
-                                          categories={book.volumeInfo.categories} />)
+                              img={book.volumeInfo.imageLinks.thumbnail}
+                              authors={book.volumeInfo.authors}
+                              name={book.volumeInfo.title}
+                              categories={book.volumeInfo.categories}
+                              bookId={book.id} />)
                   }
             </div>
       )
