@@ -7,15 +7,22 @@ import { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 const MyInput = (props) => {
   const { books, setBooks } = useContext(BooksContext)
-
+  
   useEffect(() => {
-    $("#searchBtn").on("click", (ev) => {
+    const getBooks = () => {
       request.get('https://www.googleapis.com/books/v1/volumes')
         .query({ q: $("#searchInput").val() })
         .then((data) => {
           console.log(data);
           setBooks([...data.body.items])
         })
+    }
+    $("#searchBtn").on("click", (ev) => {
+      getBooks();
+    })
+    $("#searchInput").keypress((e) => {
+      if (e.keyCode === 13)
+        getBooks();
     })
   })
 
