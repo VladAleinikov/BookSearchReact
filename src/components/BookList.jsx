@@ -1,9 +1,13 @@
-import React, { useContext } from 'react'
-import { BooksContext } from '../context'
+import React, { useContext, useEffect } from 'react'
+import { BooksContext, FilterContext } from '../context'
 import BookCard from './BookCard'
-
+import $ from 'jquery'
 const BookList = () => {
       const { books, setBooks } = useContext(BooksContext)
+
+
+
+
       return (
             <div className='booksList'>
                   {

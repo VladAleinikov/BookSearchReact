@@ -12,9 +12,7 @@ const ProductPage = () => {
 
       request.get("https://www.googleapis.com/books/v1/volumes/" + params.bookId)
         .then((data) => {
-
           setBook(data.body)
-
         })
     }
     else

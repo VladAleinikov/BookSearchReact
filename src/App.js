@@ -1,24 +1,28 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./components/AppRouter";
 import Header from "./components/UI/header/Header";
-import { BooksContext } from "./context";
+import { BooksContext, FilterContext } from "./context";
 import './style/main.css';
 
 function App() {
 
   const [books, setBooks] = useState([]);
-
+  const [filters, setFilters] = useState({category: "all", sorting:"relevance"});
   return (
     <BooksContext.Provider value={{
       books, setBooks
     }}>
-      
-      <BrowserRouter>
-        <Header />
-        <AppRouter />
-      </BrowserRouter>
-    </BooksContext.Provider>
+      <FilterContext.Provider value={{
+        filters, setFilters
+      }}>
+
+        <BrowserRouter>
+          <Header />
+          <AppRouter />
+        </BrowserRouter>
+      </FilterContext.Provider>
+    </BooksContext.Provider >
   );
 }
 
