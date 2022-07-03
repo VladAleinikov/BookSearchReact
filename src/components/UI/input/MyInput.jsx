@@ -11,6 +11,7 @@ const MyInput = (props) => {
   useEffect(() => {
     const getBooks = () => {
       setBooks([])
+      
       request.get('https://www.googleapis.com/books/v1/volumes')
         .query({ q: $("#searchInput").val() })
         .then((data) => {

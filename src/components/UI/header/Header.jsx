@@ -20,6 +20,13 @@ const Header = (props) => {
                   }
                   return array;
             }
+            const sortBooks = (array, filter) => {
+                  if (filter == "relevance")
+                        array.sort((a, b) => (b.volumeInfo.averageRating - a.volumeInfo.averageRating));
+                  else if (filter == "newest")
+                        array.sort((a, b) => (b.volumeInfo.publishedDate - a.volumeInfo.publishedDate ));
+                  return array;
+            }
             $("#categoriesSelect").change(e => {
                   setFilters({
                         category: $('#categoriesSelect').val(),
@@ -34,7 +41,7 @@ const Header = (props) => {
                         category: filters.category,
                         sorting: $('#sortSelect').val()
                   })
-                  console.log(filters);
+                  setBooks(sortBooks(books, filters.sorting))
             })
       })
       return (
