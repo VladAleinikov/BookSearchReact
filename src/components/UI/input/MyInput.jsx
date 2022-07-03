@@ -15,7 +15,7 @@ const MyInput = (props) => {
       request.get('https://www.googleapis.com/books/v1/volumes')
         .query({ q: $("#searchInput").val() })
         .then((data) => {
-          console.log(data);
+
           setBooks([...data.body.items])
         })
     }

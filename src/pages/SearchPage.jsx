@@ -1,11 +1,16 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import BookList from '../components/BookList'
 import Loading from '../components/UI/loading/Loading'
 import { BooksContext, FilterContext } from '../context'
-
+import $ from 'jquery'
 const SearchPage = () => {
   const { books, setBooks } = useContext(BooksContext)
-
+  const [ limit, setLimit ] = useState(5);
+  useEffect(() => {
+    $("#loadMoreBtn").on("click", e => {
+      setLimit(limit + 5);
+    })
+  })
 
   return (
     books.length === 0 ?
@@ -13,8 +18,8 @@ const SearchPage = () => {
       :
       <div div className="searchPage" >
         <div className="numOfBooks">Found {books.length} results</div>
-        <BookList />
-        <div className="loadMoreBtn">Load More</div>
+        <BookList limit={limit} />
+        <div className="loadMoreBtn" id="loadMoreBtn">Load More</div>
       </div >
 
 
