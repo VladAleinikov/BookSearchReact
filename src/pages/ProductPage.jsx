@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import request from 'superagent'
 import $ from 'jquery'
+import Loading from '../components/UI/loading/Loading'
 
 const ProductPage = () => {
   const params = useParams();
@@ -23,7 +24,7 @@ const ProductPage = () => {
     
   return (
     book === undefined ?
-      <div>Loading</div> :
+      <Loading/> :
 
       <div>
         <div className="bookContainer">
