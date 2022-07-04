@@ -7,6 +7,12 @@
     z-index: 19 !important;
     animation: loading-bar-spinner 400ms linear infinite;
 }
+@media (max-width: 768px) {
+  #loading-bar-spinner.spinner{
+    top: 60%;
+  }
+  
+}
 
 #loading-bar-spinner.spinner .spinner-icon {
     width: 40px;

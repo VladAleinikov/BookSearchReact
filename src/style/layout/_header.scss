@@ -14,17 +14,20 @@
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
+            h1{
+                  text-align: center;
+            }
             .filters {
-                  width: 650px;
+                  width: 100%;
+                  max-width: 650px;
                   display: flex;
                   flex-direction: row;
                   justify-content: space-around;
                   color: rgb(193, 193, 193);
                   .categories,
-                  .sorting{
+                  .sorting {
                         width: 40%;
                         display: flex;
-
                   }
             }
       }
@@ -47,6 +50,25 @@
                   width: 100%;
                   height: 100%;
                   background: rgba($color: #000000, $alpha: 0.7);
+            }
+      }
+}
+
+@media (max-width: 768px) {
+      .header {
+            height: 50vh;
+            .content {
+                  .filters {
+                        flex-direction: column;
+                        align-items: center;
+
+                        .categories,
+                        .sorting {
+                              width: 100%;
+                              justify-content: end;
+                              padding-bottom: 5px;
+                        }
+                  }
             }
       }
 }

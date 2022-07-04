@@ -24,17 +24,20 @@ const Header = (props) => {
                   if (filter == "relevance")
                         array.sort((a, b) => (b.volumeInfo.averageRating - a.volumeInfo.averageRating));
                   else if (filter == "newest")
-                        array.sort((a, b) => (b.volumeInfo.publishedDate - a.volumeInfo.publishedDate ));
+                        array.sort((a, b) => (b.volumeInfo.publishedDate - a.volumeInfo.publishedDate));
                   return array;
             }
             $("#categoriesSelect").change(e => {
-                  setFilters({
-                        category: $('#categoriesSelect').val(),
-                        sorting: filters.sorting
-                  });
+                  if (filters.category != $('#categoriesSelect').val())
+                        setFilters({
+                              category: $('#categoriesSelect').val(),
+                              sorting: filters.sorting
+                        });
+                  console.log($('#categoriesSelect').val());
+                  console.log(filters.category);
                   if (filters.categories !== "all")
                         setBooks(sortCategories(books, filters.category));
-                  console.log(books);
+
             })
             $("#sortSelect").change(e => {
                   setFilters({
