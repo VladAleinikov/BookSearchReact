@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
-* {
-      padding: 0;
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      outline: none;
-      text-decoration: none;
-}
+@import './base/normalize';
 @import "./layout/header";
 @import "./components/input";
 @import "./components/select";
