@@ -8,7 +8,7 @@ import './style/main.css';
 function App() {
 
   const [books, setBooks] = useState([]);
-  const [filters, setFilters] = useState({category: "all", sorting:"relevance"});
+  const [filters, setFilters] = useState("all");
   return (
     <BooksContext.Provider value={{
       books, setBooks

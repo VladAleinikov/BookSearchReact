@@ -5,10 +5,10 @@ import { BooksContext, FilterContext } from '../context'
 import $ from 'jquery'
 const SearchPage = () => {
   const { books, setBooks } = useContext(BooksContext)
-  const [ limit, setLimit ] = useState(5);
+  const [ limit, setLimit ] = useState(30);
   useEffect(() => {
     $("#loadMoreBtn").on("click", e => {
-      setLimit(limit + 5);
+      setLimit(limit + 30);
     })
   })
 
