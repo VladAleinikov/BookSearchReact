@@ -20,7 +20,6 @@ const Header = (props) => {
                         orderBy: $("#sortSelect").val()
                   })
                   .then((data) => {
-
                         setBooks([...data.body.items])
                         console.log(books);
                   })
@@ -48,16 +47,15 @@ const Header = (props) => {
 
 
             $("#categoriesSelect").change(e => {
-                  console.log($('#categoriesSelect').val());
-                  console.log(filters);
+
                   setBooks(books.filter(e => {
                         if (e.volumeInfo.categories != undefined)
-                        if (e.volumeInfo.categories.indexOf($('#categoriesSelect').val()) != -1)
-                              return e;
+                              if (e.volumeInfo.categories.indexOf($('#categoriesSelect').val()) != -1)
+                                    return e;
                   }))
                   /* if (filters !== "all")
                         setBooks(sortCategories(books, $("#categoriesSelect").val())) */
-                  
+
 
             })
             $("#sortSelect").change(e => {

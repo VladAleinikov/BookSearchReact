@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./components/AppRouter";
 import Header from "./components/UI/header/Header";
@@ -9,6 +9,9 @@ function App() {
 
   const [books, setBooks] = useState([]);
   const [filters, setFilters] = useState("all");
+  useEffect(() => {
+    
+  })
   return (
     <BooksContext.Provider value={{
       books, setBooks
