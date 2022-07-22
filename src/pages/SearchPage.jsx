@@ -23,7 +23,7 @@ const SearchPage = () => {
       <div div className="searchPage" >
         <div className="numOfBooks">Found {books.length} results</div>
         <BookList limit={limit} />
-        <div className="loadMoreBtn" id="loadMoreBtn">Load More</div>
+        <div className="loadMoreBtn" id="loadMoreBtn" onClick={(e) => { setLimit(limit + 30) }}>Load More</div>
       </div >
 
 
