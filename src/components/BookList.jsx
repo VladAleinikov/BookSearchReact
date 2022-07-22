@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { BooksContext, FilterContext } from '../context'
 import BookCard from './BookCard'
 import $ from 'jquery'
+import noPhoto from '../img/noPhoto.png'
 const BookList = ({ limit, ...props }) => {
       const { books, setBooks } = useContext(BooksContext)
 
@@ -13,7 +14,7 @@ const BookList = ({ limit, ...props }) => {
                   {
                         books.map((book, index) => (index < limit) ?
                               <BookCard
-                                    img={book.volumeInfo.imageLinks.thumbnail}
+                                    img={book.volumeInfo.imageLinks?.thumbnail || noPhoto}
                                     authors={book.volumeInfo.authors}
                                     name={book.volumeInfo.title}
                                     categories={book.volumeInfo.categories}
