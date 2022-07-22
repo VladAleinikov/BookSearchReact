@@ -61,7 +61,7 @@ const Header = (props) => {
             $("#sortSelect").change(e => {
                   getBooks()
             })
-      }, [])
+      }, [books])
       return (
             <header className='header'>
                   <div className="content">
