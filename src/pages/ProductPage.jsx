@@ -18,7 +18,7 @@ const ProductPage = () => {
     }
     else
       $("#description").html(book.volumeInfo.description);
-  })
+  }, [])
 
 
     

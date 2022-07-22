@@ -15,7 +15,7 @@ const Header = (props) => {
 
             request.get('https://www.googleapis.com/books/v1/volumes')
                   .query({
-                        q: $("#searchInput").val(),
+                        q: $("#searchInput").val() || "React",
                         maxResults: 40,
                         orderBy: $("#sortSelect").val()
                   })
@@ -61,7 +61,7 @@ const Header = (props) => {
             $("#sortSelect").change(e => {
                   getBooks()
             })
-      })
+      }, [])
       return (
             <header className='header'>
                   <div className="content">

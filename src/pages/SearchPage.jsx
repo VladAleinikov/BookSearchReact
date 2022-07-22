@@ -7,15 +7,7 @@ import request from 'superagent'
 const SearchPage = () => {
   const { books, setBooks } = useContext(BooksContext)
   const [ limit, setLimit ] = useState(30);
-  request.get('https://www.googleapis.com/books/v1/volumes')
-    .query({
-      q: "React",
-      maxResults: 40,
-    })
-    .then((data) => {
-      setBooks([...data.body.items])
-      console.log(books);
-    })
+  
   return (
     books.length === 0 ?
       <Loading />
